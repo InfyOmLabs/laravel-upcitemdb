@@ -41,7 +41,7 @@ class UPCItemDBManager
         $url = config('upcitemdb.url');
 
         $this->client = new Client([
-            'base_uri' => $url
+            'base_uri' => $url,
         ]);
     }
 
@@ -52,7 +52,7 @@ class UPCItemDBManager
     {
         $headers = [
             'Content-Type' => 'application/json',
-            'Accept' => 'application/json',
+            'Accept'       => 'application/json',
         ];
 
         $keyType = config('upcitemdb.key_type');
@@ -72,9 +72,11 @@ class UPCItemDBManager
 
     /**
      * @param string $upc
-     * @return array|mixed
+     *
      * @throws \Exception
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|mixed
      */
     public function lookup($upc)
     {
@@ -83,13 +85,14 @@ class UPCItemDBManager
         try {
             $response = $this->client->request('GET', 'lookup', [
                 'headers' => $headers,
-                'query' => ['upc' => $upc]
+                'query'   => ['upc' => $upc],
             ]);
             $body = $response->getBody();
+
             return json_decode($body->getContents(), true);
         } catch (\Exception $exception) {
             return [
-                'code' => $exception->getCode(),
+                'code'    => $exception->getCode(),
                 'message' => $exception->getMessage(),
             ];
         }
@@ -97,9 +100,11 @@ class UPCItemDBManager
 
     /**
      * @param string|array $search
-     * @param array $options
-     * @return array|mixed
+     * @param array        $options
+     *
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return array|mixed
      */
     public function search($search, $options = [])
     {
@@ -108,16 +113,18 @@ class UPCItemDBManager
         $headers = $this->getHeaders();
 
         $response = null;
+
         try {
             $response = $this->client->request('GET', 'search', [
                 'headers' => $headers,
-                'query' => $query
+                'query'   => $query,
             ]);
             $body = $response->getBody();
+
             return json_decode($body->getContents(), true);
         } catch (\Exception $exception) {
             return [
-                'code' => $exception->getCode(),
+                'code'    => $exception->getCode(),
                 'message' => $exception->getMessage(),
             ];
         }

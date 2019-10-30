@@ -19,6 +19,7 @@ class UPCItemDBServiceProvider extends ServiceProvider
             $configPath => config_path('upcitemdb.php'),
         ]);
     }
+
     /**
      * Register the application services.
      *
@@ -29,6 +30,5 @@ class UPCItemDBServiceProvider extends ServiceProvider
         $this->app->singleton('upcitemdb', function ($app) {
             return new UPCItemDBManager();
         });
-
     }
 }

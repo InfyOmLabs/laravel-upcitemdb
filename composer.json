@@ -1,0 +1,45 @@
+{
+    "name": "infyomlabs/laravel-upcitemdb",
+    "description": "Laravel Wrapper for UPCItemDB.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "upcitemdb",
+        "infyom",
+        "upc lookup",
+        "upc",
+        "ean",
+        "isbn"
+    ],
+    "authors": [
+        {
+            "name": "Mitul Golakiya",
+            "email": "me@mitul.me"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0|^6.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "InfyOm\\UPCItemDB\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\InfyOm\\UPCItemDB\\UPCItemDBServiceProvider"
+            ],
+            "aliases": {
+                "UPCItemDB": "InfyOm\\UPCItemDB\\UPCItemDB"
+            }
+        }
+    }
+}

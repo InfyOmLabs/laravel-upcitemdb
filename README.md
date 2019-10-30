@@ -1,6 +1,15 @@
+<h1 align="center"><img src="http://infyom.com/images/logo-red-black.png" alt="InfyOm"></h1>
+
+
 # Laravel UPCItemDB
 
 Laravel Wrapper for [UPCItemDB](https://www.upcitemdb.com/).
+
+[![Total Downloads](https://poser.pugx.org/infyomlabs/laravel-upcitemdb/downloads)](https://packagist.org/packages/infyomlabs/laravel-upcitemdb)
+[![Monthly Downloads](https://poser.pugx.org/infyomlabs/laravel-upcitemdb/d/monthly)](https://packagist.org/packages/infyomlabs/laravel-upcitemdb)
+[![Daily Downloads](https://poser.pugx.org/infyomlabs/laravel-upcitemdb/d/daily)](https://packagist.org/packages/infyomlabs/laravel-upcitemdb)
+[![License](https://poser.pugx.org/infyomlabs/laravel-upcitemdb/license)](https://packagist.org/packages/infyomlabs/laravel-upcitemdb)
+
 
 ## Installation
 

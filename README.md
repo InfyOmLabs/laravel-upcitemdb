@@ -41,9 +41,9 @@ For UPC Lookup, use the lookup method by calling,
 
 For Search API, you can use the search method,
    
-    \UPCItemDB::search('iphone');
+    \UPCItemDB::search('iphone 6');
 
-    \UPCItemDB::search('iphone', [
+    \UPCItemDB::search('iphone 6', [
         'brand' => 'apple'
-    ]));
+    ]);
 

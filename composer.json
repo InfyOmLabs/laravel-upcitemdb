@@ -41,5 +41,11 @@
                 "UPCItemDB": "InfyOm\\UPCItemDB\\UPCItemDB"
             }
         }
-    }
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/infyomlabs"
+        }
+    ]
 }
